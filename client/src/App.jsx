@@ -15,6 +15,7 @@ import ResetUserPasswordPage from "./pages/UserManagementPages/ResetUserPassword
 import StudentCreationPage from "./pages/UserManagementPages/StudentCreationPage.jsx";
 import FacultyCreationPage from "./pages/UserManagementPages/FacultyCreationPage.jsx";
 import StaffCreationPage from "./pages/UserManagementPages/StaffCreationPage.jsx";
+import ViewAllUsers from "./pages/UserManagementPages/ViewAllUsers.jsx";
 
 import CreateCustomRolePage from "./pages/RoleManagementPages/CreateCustomRolePage.jsx";
 import EditUserRolePage from "./pages/RoleManagementPages/EditUserRolePage.jsx";
@@ -24,6 +25,7 @@ import SystemAdminDashboard from "./pages/DashboardPage/SystemAdminDashboard.jsx
 import LoginPage from "./pages/Login/LoginPage.jsx";
 import Sidebar from "./components/Sidebar/Sidebar.jsx";
 import { Notifications } from '@mantine/notifications';
+import "./App.css";
 
 function Layout() {
   return (
@@ -37,6 +39,7 @@ function Layout() {
           <Route path="/UserManagement/CreateStaff" element={<RequireAuth><StaffCreationPage /></RequireAuth>} />
           <Route path="/UserManagement/DeleteUser" element={<RequireAuth><DeleteUserPage /></RequireAuth>} />
           <Route path="/UserManagement/ResetUserPassword" element={<RequireAuth><ResetUserPasswordPage /></RequireAuth>} />
+          <Route path="/UserManagement/ViewAllUsers" element={<RequireAuth><ViewAllUsers/></RequireAuth>} />
           <Route path="/RoleManagement/CreateCustomRole" element={<RequireAuth><CreateCustomRolePage /></RequireAuth>} />
           <Route path="/RoleManagement/EditUserRole" element={<RequireAuth><EditUserRolePage /></RequireAuth>} />
           <Route path="/RoleManagement/ManageRoleAccess" element={<RequireAuth><ManageRoleAccessPage /></RequireAuth>} />
